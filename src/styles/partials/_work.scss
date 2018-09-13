@@ -1,3 +1,8 @@
+.work{
+    height: calc(100vh - 50px);
+    border-bottom: 1px solid #333333;
+}
+
 .work-wrapper {
     width:100%;
     height: 100%;
@@ -6,23 +11,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    // padding: 0 5%;
+    background: #f6f6f6;
 }
 
 .dev, .design {
     flex-basis: 50%;
-    // border: 1px solid blue;
     overflow-y: scroll;
-    padding: 0px 5%;
+    padding: 0px 2%;
 }
 
 .dev {
-    border-right: 1px solid $primary;
+    border-right: 1px solid #333333;
 }
 
 h2 {
-    background: $secondary;
-    width: 45%;
+    background: #f6f6f6;
+    width: 47%;
     padding: calc((10vh - 3rem) / 2) 0px;
     position: fixed;
     font-size: 3rem;
