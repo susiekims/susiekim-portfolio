@@ -1,0 +1,68 @@
+.container {
+    width: 100%;
+    display: flex;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    cursor: pointer;
+}
+
+section h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: crosshair;
+}
+
+
+section:hover {
+    width: 40%;
+}
+
+.susie {
+    width: 35%;
+    box-shadow: 0 0 0 black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    transition: all .3s ease;
+}
+
+.developer, .designer{
+    width: calc((100% - 35%) / 2);
+    transition: all .3s ease;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    section {
+        height: 33.333vh;
+    }
+
+    section:hover {
+        width: 100%;
+    }
+
+    .susie {
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .susie, .designer, .developer {
+        width: 100%;
+    }
+}
+
+.show {
+    width: 90vw;
+}
+
+.hide {
+    width: 5vw;
+}

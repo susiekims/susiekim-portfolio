@@ -1,62 +1,17 @@
 html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
 }
 
 body {
-    background: #f6f6f6;
-    color: #333333;
-    font-family: helvetica;
-    font-size: 1rem;
-    position: relative;
+    font-family: sans-serif;
+    letter-spacing: 0.03rem;
 }
 
-h1, h2, h3, {
-    font-weight: 300;
+h1, h2, h3 {
+    font-weight: 200;
 }
 
-p {
-    font-weight: 300;
-    font-size: 1.5rem;
-    line-height: 1.2;
+h1 {
+    font-size: 2.5rem;
 }
 
-.page {
-    width: 100%;
-}
-
-footer {
-    height: 50px;
-    text-align: center;
-    z-index:1;
-}
-
-footer p {
-    padding: calc((50px - 1.2rem) / 2);
-    font-size: 1.2rem;
-}
-
-a {
-    color: inherit;
-}
-
-button {
-    border: none;
-    background: none;
-    font-size: 1.5rem;
-    color: inherit;
-}
-
-#shadow {
-    position: absolute;
-    width: 100vw;
-    height: 191vh;
-    background-color:white;
-    z-index: 1;
-    mix-blend-mode: difference;
-    display: none;
-}
-
-.emoji {
-    z-index: 2;
-}
