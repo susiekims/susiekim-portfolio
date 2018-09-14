@@ -9,12 +9,18 @@ const changeEmoji = () => {
 const showSection = (element) => {
     if ( $(window).width() > 600) {
         $(`.${element}`).on('click', function() {
-            $(`section`).css({width: '10vw'});
+            $(`section`).css({
+                width: '10vw',
+                height: '100vh'
+            });
             $(`.${element}`).css({width: '80vw'});
         })
     } else {
         $(`.${element}`).on('click', function() {
-            $(`section`).css({width: '100vw'});
+            $(`section`).css({
+                width: '100vw',
+                height: '33.333vh'
+        });
             $(`section`).css({height: '10vh'});
             $(`.${element}`).css({height: '80vh'});
         })
