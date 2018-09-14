@@ -14,6 +14,10 @@ const showSection = (element) => {
                 height: '100vh'
             });
             $(`.${element}`).css({width: '80vw'});
+            $(`section .content`).toggle(false);
+            $(`.${element} .content`).toggle(true);
+            $(`section h1`).toggle(true);
+            $(`.${element} h1`).toggle(false);
         })
     } else {
         $(`.${element}`).on('click', function() {
@@ -61,6 +65,11 @@ $(function() {
     showSection('developer')
     showSection('susie')
     showSection('designer')
+
+    document.addEventListener('keyup', function(e){
+        if(e.keyCode == 27)
+          window.location.reload();
+      })
     $(window).on('resize', function() {
         let windowWidth = $(window).width();
         if (windowWidth < 600) {
