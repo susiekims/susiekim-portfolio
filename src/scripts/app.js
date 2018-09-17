@@ -33,6 +33,13 @@ const showSection = (element) => {
     }
 }
 
+const displayIcons = () => {
+    data.icons.forEach(icon => {
+        const iconHTML = `<li><img class="icon" src="../public/assets/${icon}"/></li>`;
+        $('.skills-list').append(iconHTML);
+    })
+}
+
 const displayDev = () => {
     data.code.forEach((piece)=> {
         const newPiece = 
@@ -158,6 +165,7 @@ const init = () => {
     showSection('designer')
     displayDev(); 
     displayDesign();
+    displayIcons();
 }
 
 
