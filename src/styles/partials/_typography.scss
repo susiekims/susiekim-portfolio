@@ -7,6 +7,7 @@ body {
     letter-spacing: 0.03rem;
     color: #222222;
     background: #f6f6f6;
+    font-weight: 300;
 }
 
 h1, h2, h3 {
@@ -18,5 +19,21 @@ h1 {
 }
 
 p {
-    font-size: 3rem;
+    font-size: 3.5rem;
+}
+
+a {
+    color: inherit;
+}
+
+.developer, .designer {
+    .content {
+        h2 {
+            font-size: 3rem;
+        }
+        p, a, li {
+            font-size: 1.5rem;
+        }
+
+    }
 }

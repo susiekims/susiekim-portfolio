@@ -1,0 +1,40 @@
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    section {
+        height: 33.333vh;
+    }
+
+    section:hover {
+        width: 100%;
+    }
+
+    .susie {
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .susie, .designer, .developer {
+        width: 100%;
+    }
+
+    section .wrapper {
+        padding: 20px;
+    }
+
+    .piece-intro {
+        flex-direction: column-reverse;
+
+        .piece-text, img {
+            flex-basis: 100%;
+        }
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+
+}

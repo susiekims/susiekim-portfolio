@@ -7,10 +7,10 @@ section {
     height: 100vh;
     position: relative;
     overflow-x: hidden;
-    padding: 10px;
 }
 
 section .wrapper {
+    padding: 50px 80px;
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -30,7 +30,7 @@ section .content {
 
 section:hover {
     width: 40%;
-    // border-radius: 20%;
+   // border-radius: 20%;
 }
 
 .susie {
@@ -46,36 +46,18 @@ section:hover {
     transition: all .3s ease;
 }
 
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
-
-    section {
-        height: 33.333vh;
-    }
-
-    section:hover {
-        width: 100%;
-    }
-
-    .susie {
-        border: none;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-    }
-
-    .susie, .designer, .developer {
-        width: 100%;
-    }
-}
-
 .show {
     width: 90vw;
 }
 
 .hide {
     width: 5vw;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
 }
 
 
