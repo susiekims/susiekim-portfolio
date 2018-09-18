@@ -6,12 +6,21 @@ const changeEmoji = () => {
 
 const lights = () => {
     $('input:checkbox').change(function() {
-        if ($(this).is(':checked')) {
+        if ($('input:checkbox').prop('checked')) {
             $('body').addClass('dark');
-            $('.susie').addClass('dark-border');
-        } else {
+            if ( $(window).width() > 600) {
+                $('.susie').addClass('dark-border');
+            } else {
+                $('.susie').addClass('dark-border-mobile');
+            }
+        } 
+        if ($('input:checkbox').prop('checked') === false ) {
             $('body').removeClass('dark');
-            $('.susie').removeClass('dark-border');
+            if ( $(window).width() > 600) {
+                $('.susie').removeClass('dark-border');
+            } else {
+                $('.susie').removeClass('dark-border-mobile');
+            }
         }
     }); 
 }
@@ -43,6 +52,26 @@ const showSection = (element) => {
             $(`.${element} h1`).toggle(false);
         });
     }
+}
+
+const closeViews = () => {
+
+    $('.close').on('click', function(e) {
+        e.stopPropagation();
+        if ( $(window).width() > 600) {
+            $('.content').toggle(false);
+            $('section').css({
+                width: '33.33%',
+            });
+            $(`section h1`).toggle(true);
+        } else {
+            $('.content').toggle(false);
+            $('section').css({
+                height: '33.33vh',
+            });
+            $(`section h1`).toggle(true);
+        }
+    })
 }
 
 const displayIcons = () => {
@@ -155,6 +184,7 @@ const events = () => {
         $('.wrapper h1').toggle(true);
         let windowWidth = $(window).width();
         
+        //moble resize
         if (windowWidth < 600) {
             $('section').css({
                 width: '100%',
@@ -163,6 +193,10 @@ const events = () => {
             showSection('developer')
             showSection('susie')
             showSection('designer')
+            if ( $('body').hasClass('dark') ) {
+                $('.susie').removeClass('dark-border');
+                $('.susie').addClass('dark-border-mobile');
+            } 
         } else {
             $('section').css({
                 width: '33.333%',
@@ -171,6 +205,11 @@ const events = () => {
             showSection('developer')
             showSection('susie')
             showSection('designer')
+
+            if ( $('body').hasClass('dark') ) {
+                $('.susie').removeClass('dark-border-mobile');
+                $('.susie').addClass('dark-border');
+            } 
         }
     })
 }
@@ -178,6 +217,7 @@ const events = () => {
 const init = () => {
     events();
     changeEmoji();
+    closeViews();
     showSection('developer')
     showSection('susie')
     showSection('designer')
