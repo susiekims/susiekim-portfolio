@@ -85,9 +85,15 @@ const displayDev = () => {
                         </div>
                     </div>
                 </div>
-                <img src="${piece.img[0]}"/>
+                <img src="../public/assets/dev/${piece.img[0]}"/>
             </div>
-            <div class="images"></div>
+            <div class="images">
+                ${
+                    piece.img.slice(1).map(image => {
+                        return `<img src="../public/assets/dev/${image}" />`
+                    }).join('')
+                }
+            </div>
         </div>`;
         $('.developer .content').append(newPiece);
     })
