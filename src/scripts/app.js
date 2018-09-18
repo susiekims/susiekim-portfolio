@@ -4,7 +4,17 @@ const changeEmoji = () => {
     });
 }
 
-
+const lights = () => {
+    $('input:checkbox').change(function() {
+        if ($(this).is(':checked')) {
+            $('body').addClass('dark');
+            $('.susie').addClass('dark-border');
+        } else {
+            $('body').removeClass('dark');
+            $('.susie').removeClass('dark-border');
+        }
+    }); 
+}
 
 const showSection = (element) => {
     if ( $(window).width() > 600) {
@@ -37,7 +47,7 @@ const showSection = (element) => {
 
 const displayIcons = () => {
     data.icons.forEach(icon => {
-        const iconHTML = `<li><img class="icon" src="../public/assets/${icon}"/></li>`;
+        const iconHTML = `<li><img class="icon" src="../public/assets/icons/${icon}"/></li>`;
         $('.skills-list').append(iconHTML);
     })
 }
@@ -168,6 +178,7 @@ const init = () => {
     displayDev(); 
     displayDesign();
     displayIcons();
+    lights();
 }
 
 
