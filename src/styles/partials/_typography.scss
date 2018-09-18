@@ -43,6 +43,11 @@ a {
     color: inherit;
 }
 
+a:hover {
+    font-family: consolas;
+    line-height: 1;
+}
+
 .developer, .designer {
     .content {
         p, a, li {

@@ -29,6 +29,10 @@
         padding: 20px;
     }
 
+    .susie-skills {
+        flex-wrap: wrap;
+    }
+
     .piece-intro {
         flex-direction: column-reverse;
 
@@ -40,5 +44,4 @@
             margin-bottom: 10px;
         }
     }
-
 }

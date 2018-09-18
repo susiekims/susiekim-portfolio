@@ -32,12 +32,12 @@ section .content {
     display: none;
 }
 
-section:hover {
-    width: 40%;
-}
+// section:hover {
+//     width: 40%;
+// }
 
 .susie {
-    width: 35%;
+    width: 33.333%;
     box-shadow: 0 0 0 black;
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -45,7 +45,7 @@ section:hover {
 }
 
 .developer, .designer{
-    width: calc((100% - 35%) / 2);
+    width: 33.333%;
     transition: all .3s ease;
 }
 

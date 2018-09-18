@@ -2,7 +2,7 @@
     width: 30px;
     height: 30px;
     position: fixed;
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
 }
 
 
@@ -10,6 +10,7 @@
     content: '';
     height: 30px;
     border-left: 1.5px solid white;
+    // border-left: 1.5px solid grey;
     position: absolute;
     transform: rotate(45deg);
     left: 14px;
@@ -19,6 +20,7 @@
     content: '';
     height: 30px;
     border-left: 1.5px solid white;
+    // border-left: 1.5px solid grey;
     position: absolute;
     transform: rotate(-45deg);
     left: 14px;
