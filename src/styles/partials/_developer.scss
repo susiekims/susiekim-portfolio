@@ -41,22 +41,18 @@
 
 
 .link {
-    margin-bottom: 50px;
     margin-right: 10px;
     display: inline-block;
 }
 
-.content {
-    h3 {
-        font-size: 1.5rem;
-    }
-    .stack-roles {
-        display: flex;
-        justify-content: space-between;
-    }
-    .column {
-        flex-basis: 50%;
-    }
+.stack-roles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.column {
+    flex-basis: 50%;
 }
 
 .images {

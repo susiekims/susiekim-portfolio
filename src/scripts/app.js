@@ -4,6 +4,8 @@ const changeEmoji = () => {
     });
 }
 
+
+
 const showSection = (element) => {
     if ( $(window).width() > 600) {
         $(`.${element}`).on('click', function() {
@@ -43,7 +45,7 @@ const displayIcons = () => {
 const displayDev = () => {
     data.code.forEach((piece)=> {
         const newPiece = 
-        `<div class="piece">
+        `<div class="piece scroll">
             <div class="piece-intro">
                 <div class="piece-text">
                     <h2>${piece.title}</h2>
@@ -84,7 +86,7 @@ const displayDev = () => {
 const displayDesign = () => {
     data.design.forEach((piece)=> {
         const newPiece = 
-        `<div class="piece">
+        `<div class="piece scroll">
             <div class="piece-intro">
                 <div class="piece-text">
                     <h2>${piece.title}</h2>

@@ -8,9 +8,12 @@ body {
     color: #222222;
     background: #f6f6f6;
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.1px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: 200;
 }
 
@@ -18,8 +21,21 @@ h1 {
     font-size: 2.5rem;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
 p {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 a {
@@ -28,12 +44,10 @@ a {
 
 .developer, .designer {
     .content {
-        h2 {
-            font-size: 3rem;
-        }
         p, a, li {
             font-size: 1.5rem;
         }
 
     }
 }
+
