@@ -40,6 +40,9 @@ const showSection = (element) => {
             $(`.${element}`).css({width: '80vw'});
 
             $('section').removeClass('open');
+            $('section').addClass('closed');
+
+            $(`.${element}`).removeClass('closed');
             $(`.${element}`).addClass('open'); 
 
             $(`section .content`).toggle(false);
@@ -87,18 +90,19 @@ const showSection = (element) => {
 
 const hover = () => {
     $('section').hover(
-        function(e) {
+        function() {
             if ( $(window).width() > 600 && $('section').hasClass('open') === false ) {
                 $(this).css({width: '38%'});
             }
         },
-        function(e) {
+        function() {
             if ( $(window).width() > 600 && $('section').hasClass('open') === false ) {
                 $(this).css({width: '33.333%'});
-            }
+            } 
         }
     )
 }
+
 
 const closeViews = () => {
     $('.close').on('click', function(e) {
@@ -110,6 +114,7 @@ const closeViews = () => {
             });
             $(`section h1`).toggle(true);
             $('section').removeClass('open');
+            $('section').removeClass('closed');
             $('section h1').css({
                 transform: 'translate(-50%, -50%) rotate(0deg)'
             })
