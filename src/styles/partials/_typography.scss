@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: sans-serif;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.025rem;
     color: #222222;
     background: #f6f6f6;
     font-weight: 300;
@@ -30,8 +30,10 @@ h3 {
 }
 
 h4 {
+    opacity: 0.62;
     font-size: 1.2rem;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 p {
@@ -41,11 +43,10 @@ p {
 
 a {
     color: inherit;
-}
 
-a:hover {
-    font-family: consolas;
-    line-height: 1;
+    &:hover {
+        opacity: .62;
+    }
 }
 
 .developer, .designer {
@@ -55,4 +56,22 @@ a:hover {
         }
 
     }
+}
+
+.link {
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 5px 12px;
+    border-radius: 1.5rem;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.links {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
 }

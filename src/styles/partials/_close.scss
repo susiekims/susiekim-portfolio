@@ -1,16 +1,15 @@
 .close {
     width: 30px;
     height: 30px;
-    position: fixed;
-    mix-blend-mode: exclusion;
+    position: absolute;
+    right: 25px;
 }
 
 
 .close:after {
     content: '';
     height: 30px;
-    border-left: 1.5px solid white;
-    // border-left: 1.5px solid grey;
+    border-left: 1.5px solid #333;
     position: absolute;
     transform: rotate(45deg);
     left: 14px;
@@ -19,8 +18,7 @@
 .close:before {
     content: '';
     height: 30px;
-    border-left: 1.5px solid white;
-    // border-left: 1.5px solid grey;
+    border-left: 1.5px solid #333;
     position: absolute;
     transform: rotate(-45deg);
     left: 14px;

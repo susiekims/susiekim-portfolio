@@ -1,9 +1,13 @@
+// random favicon on refresh
+// random favicon on mousemove
 const changeEmoji = () => {
-    $( document ).on( "mousemove",(e) => {
+    $('.favicon').attr('href', data.favicons[Math.floor(Math.random() * data.favicons.length)]);
+    $( document ).on( "mousemove", () => {
         $('#emoji').text(data.emojis[Math.floor(Math.random() * data.emojis.length)]);
     });
 }
 
+// toggle dark mode/light mode if checkbox is checked
 const lights = () => {
     $('input:checkbox').change(function() {
         if ($('input:checkbox').prop('checked')) {
@@ -29,22 +33,36 @@ const showSection = (element) => {
     if ( $(window).width() > 600) {
         $(`.${element}`).on('click', function(e) {
             e.stopPropagation();
-
             $(`section`).css({
                 width: '10vw',
                 height: '100vh'
             });
-            // $('section').data('size','small');
             $(`.${element}`).css({width: '80vw'});
 
-            $('section').removeClass('small');
-            $(`.${element}`).addClass('small'); ////////////////
+            $('section').removeClass('open');
+            $(`.${element}`).addClass('open'); 
 
-
-            $(`.${element}`).data('class','open');
             $(`section .content`).toggle(false);
             $(`.${element} .content`).toggle(true);
             $(`section h1`).toggle(true);
+
+            if (element === 'developer') {
+                $('section h1').css({
+                    transform: 'translate(-50%, -50%) rotate(90deg)',
+                })
+            } else if (element === 'designer') {
+                $('section h1').css({
+                    transform: 'translate(-50%, -50%) rotate(-90deg)',
+                })
+            } else {
+                $('.developer h1').css({
+                    transform: 'translate(-50%, -50%) rotate(-90deg)',
+                })
+                $('.designer h1').css({
+                    transform: 'translate(-50%, -50%) rotate(90deg)',
+                })
+            }
+
             $(`.${element} h1`).toggle(false);
         })
     } else {
@@ -54,8 +72,9 @@ const showSection = (element) => {
                 width: '100vw',
                 height: '33.333vh'
             });
-            // $('section').data('size','small');
-    
+            $('section h1').css({
+                transform: 'translate(-50%, -50%) rotate(0deg)',
+            })
             $(`section`).css({height: '10vh'});
             $(`.${element}`).css({height: '80vh'});
             $(`section .content`).toggle(false);
@@ -69,15 +88,12 @@ const showSection = (element) => {
 const hover = () => {
     $('section').hover(
         function(e) {
-            console.log('do it')
-            if ( $(window).width() > 600 && $('section').hasClass('small') === false ) {
-                // console.log($('section').hasClass('small'));
+            if ( $(window).width() > 600 && $('section').hasClass('open') === false ) {
                 $(this).css({width: '38%'});
             }
         },
         function(e) {
-            if ( $(window).width() > 600 && $('section').hasClass('small') === false ) {
-                // console.log($('section').hasClass('small'));
+            if ( $(window).width() > 600 && $('section').hasClass('open') === false ) {
                 $(this).css({width: '33.333%'});
             }
         }
@@ -93,7 +109,10 @@ const closeViews = () => {
                 width: '33.33%',
             });
             $(`section h1`).toggle(true);
-            $('section').removeClass('small');
+            $('section').removeClass('open');
+            $('section h1').css({
+                transform: 'translate(-50%, -50%) rotate(0deg)'
+            })
         } else {
             $('.content').toggle(false);
             $('section').css({
@@ -119,11 +138,9 @@ const displayDev = () => {
                 <div class="piece-text">
                     <h2>${piece.title}</h2>
                     <p>${piece.desc}</p>
-                    <a class="link" href="${piece.live}">View Live</a>
-                    <a class="link" href="${piece.github}">View on Gitub</a>
                     <div class="stack-roles">
                         <div class="column">
-                            <h3>STACK</h3>
+                            <h4>STACK</h4>
                             <ul class="stack">
                             ${
                                 piece.stack.map(skill => {
@@ -133,7 +150,7 @@ const displayDev = () => {
                             </ul>
                         </div>
                         <div class="column">
-                            <h3>ROLES</h3>
+                            <h4>ROLES</h4>
                             <ul class="roles">
                             ${
                                 piece.roles.map(role => {
@@ -152,6 +169,10 @@ const displayDev = () => {
                         return `<img src="../public/assets/dev/${image}" />`
                     }).join('')
                 }
+            </div>
+            <div class="links">
+                <a class="link" href="${piece.live}">View Live</a>
+                <a class="link" href="${piece.github}">View on Gitub</a>
             </div>
         </div>`;
         $('.developer .content').append(newPiece);
@@ -178,7 +199,7 @@ const displayDesign = () => {
                             </ul>
                         </div>
                         <div class="column">
-                            <h3>ROLES</h3>
+                            <h4>ROLES</h4>
                             <ul class="roles">
                             ${
                                 piece.roles.map(role => {
@@ -210,6 +231,9 @@ const events = () => {
     })
 
     $(window).on('resize', function() {
+        $('section h1').css({
+            transform: 'translate(-50%, -50%) rotate(0deg)'
+        })
         $('.content').toggle(false);
         $('.wrapper h1').toggle(true);
         let windowWidth = $(window).width();

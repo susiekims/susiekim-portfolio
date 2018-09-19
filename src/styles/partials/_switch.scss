@@ -48,10 +48,9 @@ label:active:after {
 
 .switch {
     position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
     bottom: 20px;
+    left: 50%;
+    transform: translateX( -50%);
 }
 
 .dark {

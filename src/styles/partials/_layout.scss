@@ -18,7 +18,7 @@ section .wrapper {
 }
 
 .susie .wrapper {
-    padding: 20px;
+    padding: 20px 80px;
 }
 
 section h1 {
@@ -26,6 +26,7 @@ section h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: .3s ease-in transform;
 }
 
 section .content {
