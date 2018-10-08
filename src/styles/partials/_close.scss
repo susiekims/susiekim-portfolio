@@ -3,13 +3,14 @@
     height: 30px;
     position: absolute;
     right: 25px;
+    mix-blend-mode: difference;
 }
 
 
 .close:after {
     content: '';
     height: 30px;
-    border-left: 1.5px solid #333;
+    border-left: 1.5px solid white;
     position: absolute;
     transform: rotate(45deg);
     left: 14px;
@@ -18,7 +19,7 @@
 .close:before {
     content: '';
     height: 30px;
-    border-left: 1.5px solid #333;
+    border-left: 1.5px solid white;
     position: absolute;
     transform: rotate(-45deg);
     left: 14px;

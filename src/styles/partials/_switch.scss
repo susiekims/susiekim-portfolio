@@ -1,4 +1,14 @@
 
+.susie {
+    position: relative;
+}
+
+.switch {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+
 input[type=checkbox]{
 	height: 0;
 	width: 0;
@@ -40,17 +50,6 @@ input:checked + label:after {
 
 label:active:after {
 	width: 30px;
-}
-
-.susie {
-    position: relative;
-}
-
-.switch {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX( -50%);
 }
 
 .dark {

@@ -194,7 +194,7 @@ const displayDesign = () => {
                     <p>${piece.desc}</p>
                     <div class="stack-roles">
                         <div class="column">
-                            <h3>STACK</h3>
+                            <h4>STACK</h4>
                             <ul class="stack">
                             ${
                                 piece.stack.map(skill => {
