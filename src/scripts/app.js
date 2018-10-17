@@ -13,8 +13,10 @@ const lights = () => {
         if ($('input:checkbox').prop('checked')) {
             $('body').addClass('dark');
             if ( $(window).width() > 600) {
+                $('.susie').removeClass('dark-border-mobile');
                 $('.susie').addClass('dark-border');
             } else {
+                $('.susie').removeClass('dark-border');
                 $('.susie').addClass('dark-border-mobile');
             }
         } 

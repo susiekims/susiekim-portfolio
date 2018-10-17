@@ -15,6 +15,7 @@ section .wrapper {
     height: 100%;
     cursor: pointer;
     overflow-y: scroll;
+     -webkit-overflow-scrolling: touch;
 }
 
 .susie .wrapper {
