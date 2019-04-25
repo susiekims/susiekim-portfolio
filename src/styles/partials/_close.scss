@@ -1,27 +1,25 @@
 .close {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 25px;
-    mix-blend-mode: difference;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 25px;
+  mix-blend-mode: exclusion;
 }
 
-
 .close:after {
-    content: '';
-    height: 30px;
-    border-left: 1.5px solid white;
-    position: absolute;
-    transform: rotate(45deg);
-    left: 14px;
+  content: "";
+  height: 30px;
+  border-left: 1px solid #222;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 14px;
 }
 
 .close:before {
-    content: '';
-    height: 30px;
-    border-left: 1.5px solid white;
-    position: absolute;
-    transform: rotate(-45deg);
-    left: 14px;
+  content: "";
+  height: 30px;
+  border-left: 1px solid #222;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 14px;
 }
-

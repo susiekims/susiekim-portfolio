@@ -1,53 +1,51 @@
 @media (max-width: 600px) {
+  .switch {
+    left: 15px;
+  }
 
-    .switch {
-        left: 15px;
+  p {
+    font-size: 1.5rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  section {
+    height: 33.333vh;
+  }
+
+  section:hover {
+    width: 100%;
+  }
+
+  .susie {
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .susie,
+  .designer,
+  .developer {
+    width: 100%;
+  }
+
+  section .wrapper,
+  .susie .wrapper {
+    padding: 20px;
+  }
+
+  .piece-intro {
+    flex-direction: column;
+
+    .piece-text,
+    img {
+      flex-basis: 100%;
+      width: 100%;
     }
 
-    p {
-        font-size: 1.5rem;
+    img {
+      margin-top: 40px;
     }
-    .container {
-        flex-direction: column;
-    }
-
-    section {
-        height: 33.333vh;
-    }
-
-    section:hover {
-        width: 100%;
-    }
-
-    .susie {
-        border: none;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-    }
-
-    .susie, .designer, .developer {
-        width: 100%;
-    }
-
-    section .wrapper, .susie .wrapper {
-        padding: 20px;
-    }
-
-    .skills-list {
-        flex-wrap: wrap;
-    }
-
-    .piece-intro {
-        flex-direction: column;
-
-        .piece-text, img {
-            flex-basis: 100%;
-            width: 100%;
-        }
-
-        img {
-            margin-top: 40px;
-        }
-    }
-    
+  }
 }
