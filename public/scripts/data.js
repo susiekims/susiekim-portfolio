@@ -2,7 +2,7 @@ const data = {
   code: [
     {
       title: "Company Certification",
-      img: ["openhxouse1.png", "openhxouse.png"],
+      img: ["companycert1.png", "companycert2.png"],
       stack: [
         "React",
         "Redux",
@@ -13,7 +13,7 @@ const data = {
       ],
       roles: ["Web Development"],
       desc:
-        'The final project for <a href="https://bridgeschool.io/">Bridge for Software Development</a>, where students were put in teams of four, along with a product owner and lead developer, to utilize agile (kanban) methodologies. Our group was tasked with creating an app that certifies companies based on diversity and inclusion standards, then match certified companies with alumni that share tech/industry interests. <a href="https://material-ui.com/">Material UI</a> was used as the UI library. The backend was built with Node.js + Express, using Cloud Firestore, Firebase\'s new document-model database. View the backend repo <a href="https://github.com/bridge-school/company-cert-backend">here</a>.',
+        'The final project for <a href="https://bridgeschool.io/">Bridge for Software Development</a>. Students were put into teams of four, along with a product owner and lead developer, to utilize agile (kanban) methodologies. Our group was tasked with creating an app that certifies companies based on diversity and inclusion standards, then match certified companies with alumni that share tech/industry interests. <a href="https://material-ui.com/">Material UI</a> was used as the UI library. The backend was built with Node.js + Express, using Cloud Firestore, Firebase\'s new document-model database. View the backend repo <a href="https://github.com/bridge-school/company-cert-backend">here</a>.',
       live: "http://company-cert-frontend.bridgeschoolapp.io/",
       github: "https://github.com/bridge-school/company-cert-frontend"
     },
